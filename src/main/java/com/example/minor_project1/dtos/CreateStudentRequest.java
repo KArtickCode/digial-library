@@ -29,6 +29,13 @@ public class CreateStudentRequest {
 
     private String country;
 
+    @NotBlank
+    private String username;
+
+    @NotBlank
+    private String password;
+
+
     public Student convertTo(){
 
         Student student = new Student();

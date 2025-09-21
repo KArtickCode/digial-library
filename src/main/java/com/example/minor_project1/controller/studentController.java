@@ -31,15 +31,15 @@ public class studentController {
 
     @GetMapping("/details")                // Only Student can see their own details because here studentId is not present in the librarian(librarian has a librarianId)
     public Student getStudentDetails2(){
-        Integer studentId = null;
+//        Integer studentId = null;
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = (User) authentication.getPrincipal();
-        Integer userId = user.getId();
+//        Integer userId = user.getId();
 
         //student service class method to retrieve the student details;
         // Receive studentId from security context
-        return studentService.findById(studentId);
+        return studentService.findById(user.getSourceEntityId());
     }
     
 
