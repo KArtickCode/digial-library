@@ -17,11 +17,11 @@ public class CreateAdminRequest {
     private String username;
     private String password;
 
-    public Admin convertTo(){
+    public Admin convertTo(){           // a method to convert DTO data into an Entity object
 
-        Admin admin = new Admin();
-        admin.setName(this.name);
+        Admin admin = new Admin();      // create entity object
+        admin.setName(this.name);       // set values from DTO to entity
 
-        return admin;
+        return admin;                   // return entity
     }
 }

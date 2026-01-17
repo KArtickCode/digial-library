@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class StudentCacheRepository {
 
-    private static final String STUDENT_CACHE_KEY_PREFIX = "student::";
+    private static final String STUDENT_CACHE_KEY_PREFIX = "student::";         //
 
     @Autowired
     RedisTemplate<String, Object> redisTemplate;

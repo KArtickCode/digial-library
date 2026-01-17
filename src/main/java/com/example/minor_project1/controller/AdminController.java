@@ -17,14 +17,16 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
+
 //    @PostMapping("")             // Anyone can create a student
 //    public Student createAdmin(@Valid @RequestBody CreateStudentRequest createStudentRequest){
 //
 //        return adminService.createAdmin(createStudentRequest);
 //    }
 
-    @PostMapping("")
-    public Admin createAdmin(@Valid @RequestBody CreateAdminRequest createAdminRequest) {
+
+    @PostMapping("")         // Only admin can create another admin
+    public Admin createAdmin(@Valid @RequestBody CreateAdminRequest createAdminRequest) {       // @RequestBody Converts : incoming JSON data into a Java object
         return adminService.createAdmin(createAdminRequest);
     }
 

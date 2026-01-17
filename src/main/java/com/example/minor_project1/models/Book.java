@@ -9,33 +9,34 @@ import java.util.Date;
 
 @Getter
 @Setter
-@Builder
+@Builder        // used to implement the builder pattern for the class. It provides a flexible way to create objects.
 @AllArgsConstructor
-@NoArgsConstructor
-@Entity
+@NoArgsConstructor  // used to create a no-argument constructor
+@Entity             // used to mark a class as an entity which is mapped to a database table
 public class Book {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id                                     // used to mark a field as primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // used to auto-generate the primary key value
     private Integer id;
     private String name;
 
-    @Enumerated(value = EnumType.STRING)
+    @Enumerated(value = EnumType.STRING)    // This annotation is used to store enum as string in DB
     private Genre genre;
 
     private Boolean isAvailable;
 
     private Long issueCount;
 
-    @CreationTimestamp
+    @CreationTimestamp      // automatically sets the creation timestamp when the entity is created
     private Date createdAt;
 
     @UpdateTimestamp
     private Date updatedAt;
 
     // the below two annotation is used for create a  foreign key
-    @JoinColumn
-    @ManyToOne
+
+    @JoinColumn     // used to specify the foreign key column
+    @ManyToOne      // many books can be issued by one student
 //    private Student my_student;
     private Student student;
 

@@ -12,19 +12,20 @@ import java.util.stream.Collectors;
 @Entity
 public class User implements UserDetails {
 
-    private static final String DELIMITER = ":";
+    private static final String DELIMITER = ":";     // defining delimiter for authorities
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) // indexing
     private Integer id;
 
-    @Column(unique = true)
+    @Column(unique = true)    // username should be unique
     private String username;
+
     private String password;
 
     private String authorities;
 
-    private Integer sourceEntityId;
+    private Integer sourceEntityId;         // studentId or adminId
 
     @Enumerated(value = EnumType.STRING)
     private SourceEntityType sourceEntityType;

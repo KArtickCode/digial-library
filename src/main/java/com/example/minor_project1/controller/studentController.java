@@ -23,18 +23,27 @@ public class studentController {
         return studentService.create(createStudentRequest);
     }
 
-    @GetMapping("/{studentId}")                // Student and libraria both can see the student details
-    public Student getStudentDetails(@PathVariable("studentId") Integer studentId){
-        //student service class method to retrieve the student details;
-        return studentService.findById(studentId);
+    @GetMapping("/{studentId}")                    // Student and libraria both can see the student details
+    public Student getStudentDetails(@PathVariable("studentId") Integer studentId){     // @PathVarisaable is used to extract the value of the template variable from the URI
+
+        return studentService.findById(studentId);   // student service class method to retrieve the student details;
     }
 
     @GetMapping("/details")                // Only Student can see their own details because here studentId is not present in the librarian(librarian has a librarianId)
     public Student getStudentDetails2(){
 //        Integer studentId = null;
 
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        // It gets the details of the currently logged-in user from Spring Security.
+        Authentication authentication = SecurityContextHolder
+                .getContext()            // This context stores authentication data
+                .getAuthentication();      // This method retrieves the authentication object representing the current user's authentication state
+
+        /* authentication.getPrincipal()
+        Returns the principal object
+        The principal represents who is logged in */
+
         User user = (User) authentication.getPrincipal();
+
 //        Integer userId = user.getId();
 
         //student service class method to retrieve the student details;

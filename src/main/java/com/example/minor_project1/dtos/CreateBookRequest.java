@@ -33,9 +33,9 @@ public class CreateBookRequest {
 
     private String authorCountry;
 
-    public Book convertToBook() {
+    public Book convertToBook() {           // a method to convert DTO data into an Entity object
 
-        return Book.builder()
+        return Book.builder()               // create entity object
                 .name(this.name)
                 .genre(this.genre)
                 .isAvailable(this.isAvailable == null ? true: this.isAvailable)

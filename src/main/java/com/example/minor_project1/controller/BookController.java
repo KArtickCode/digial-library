@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/books")
+@RestController     // @Controller + @ResponseBody. Use this when you are building REST APIs
+@RequestMapping("/books")       // Base URL for this controller. All the APIs in this controller will start with /books
 public class BookController {
 
-    private static Logger logger = LoggerFactory.getLogger(BookController.class);
+    private static Logger logger = LoggerFactory.getLogger(BookController.class); // Used to log messages for debugging and monitoring.
 
     @Autowired
     BookService bookService;
