@@ -1,132 +1,110 @@
-# 📚 Digital Library Management System
+<h1 align="center">📚 Digital Library Management System</h1>
 
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Backend-green?style=for-the-badge&logo=springboot)
-![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=java)
-![MySQL](https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql)
-![Hibernate](https://img.shields.io/badge/Hibernate-ORM-brown?style=for-the-badge)
-![JDBC](https://img.shields.io/badge/JDBC-Database%20Connectivity-darkblue?style=for-the-badge)
-![Spring Security](https://img.shields.io/badge/Spring%20Security-Auth-green?style=for-the-badge&logo=springsecurity)
-![Redis](https://img.shields.io/badge/Redis-Caching-red?style=for-the-badge&logo=redis)
-![Maven](https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven)
-![REST API](https://img.shields.io/badge/REST-API-lightgrey?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+<p align="center">
+A scalable and secure <b>Spring Boot-based Digital Library System</b> with authentication, role-based access control, Redis caching, and RESTful APIs.
+</p>
 
-## 🚀 Overview
-
-A full-stack **Digital Library System** built using Spring Boot that enables secure user management, book handling, and transaction processing with role-based access control.
+<p align="center">
+  <img src="https://img.shields.io/badge/Spring%20Boot-Backend-green?style=for-the-badge&logo=springboot"/>
+  <img src="https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=java"/>
+  <img src="https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql"/>
+  <img src="https://img.shields.io/badge/Spring%20Security-Auth-green?style=for-the-badge&logo=springsecurity"/>
+  <img src="https://img.shields.io/badge/Redis-Caching-red?style=for-the-badge&logo=redis"/>
+  <img src="https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven"/>
+</p>
 
 ---
 
-## 🚀 Features
+## ✨ Overview
 
-### 🔐 Authentication & Security
-- Implemented Spring Security for authentication and authorization  
-- Used BCrypt password encoding for secure password storage  
-- Designed role-based access control (RBAC) with ADMIN and STUDENT roles  
-- Secured APIs using HTTP Basic Authentication  
+The **Digital Library Management System** is a backend project built using Spring Boot that allows secure management of books, students, and transactions with role-based access control.
 
-### 👨‍🎓 Student Management
-- Register new students using public API  
-- Fetch student details by ID  
-- Retrieve logged-in student details using Security Context  
+---
 
-### 👨‍💼 Admin Management
-- Admins can create and manage other admin accounts  
-- Restricted admin APIs to ADMIN role only  
+## 🚀 Key Features
+
+### 🔐 Security & Authentication
+- Spring Security-based authentication system  
+- Role-Based Access Control (ADMIN / STUDENT)  
+- BCrypt password encryption  
+- Secure REST APIs  
+
+### 👨‍🎓 Student Module
+- Register new students  
+- View student details  
+- Access personal data securely  
 
 ### 📚 Book Management
-- Add and manage books (Admin only)  
+- Add / update / delete books (Admin only)  
+- Search books by name & genre  
 - Fetch all books  
-- Search books by name and genre  
 
-### 🔄 Transaction Management
+### 🔄 Transaction System
 - Issue and return books  
-- Maintain transaction records  
-- View transaction history with filters
+- Maintain transaction history  
+- Secure access to records  
 
-### ⚡ Performance Optimization
-- Integrated **Redis caching** to improve response time and reduce database load  
-
----
-
-## 🛠️ Tech Stack
-
-- Backend: Spring Boot, Spring Security  
-- Database: MySQL  
-- ORM: Hibernate, JDBC  
-- Caching: Redis  
-- API: RESTful APIs  
-- Tools: Lombok, Maven  
+### ⚡ Performance
+- Redis caching for faster response time  
+- Optimized database queries  
 
 ---
 
-## 🧩 Architecture
+## 🧠 Tech Stack
 
+- ☕ Java 17  
+- 🌱 Spring Boot  
+- 🔐 Spring Security  
+- 🗄️ MySQL  
+- ⚡ Redis  
+- 🔧 Hibernate / JDBC  
+- 📦 Maven  
+
+---
+
+## 🏗️ Architecture
 
 Controller → Service → Repository → Database
 
 
 ---
 
-## ⚙️ Setup & Installation
-
-### 📥 Clone Repository
-```bash
-git clone https://github.com/KArtickCode/digial-library.git
-cd digial-library
-```
-
-### 🗄️ Configure Database
-```bash
-Update application.properties:
-
-spring.datasource.url=jdbc:mysql://localhost:3306/library_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-```
-
-### ▶️ Run Application
-```bash
-mvn clean install
-mvn spring-boot:run
-```
----
-
-## 🔗 API Endpoints
+## 📡 API Endpoints
 
 ### 👨‍🎓 Student
-- `POST /students`  
-- `GET /students/{id}`  
-- `GET /students/details`  
-
-### 👨‍💼 Admin
-- `POST /admin`  
+- `POST /students`
+- `GET /students/{id}`
+- `GET /students/details`
 
 ### 📚 Books
-- `POST /books`  
-- `GET /books/all`  
-- `GET /books/find-by-name?name=`  
-- `GET /books/find-by-genre?genre=`  
+- `POST /books`
+- `GET /books/all`
+- `GET /books/find-by-name`
+- `GET /books/find-by-genre`
 
 ### 🔄 Transactions
-- `POST /transactions/issue`  
-- `POST /transactions/return`  
-- `GET /transactions/all`  
-- `GET /transactions`  
+- `POST /transactions/issue`
+- `POST /transactions/return`
+- `GET /transactions/all`
 
 ---
 
-## 🔐 Security
+## 🚀 Why This Project Stands Out
 
-- Spring Security with UserDetailsService  
-- BCrypt password encryption  
-- Role-based access (ADMIN / STUDENT)  
-- SecurityContext for logged-in user  
+✔ Real-world backend system  
+✔ Secure authentication & authorization  
+✔ Redis performance optimization  
+✔ Clean layered architecture  
+✔ RESTful API design  
 
 ---
 
-## 🚀 Future Enhancements
+## 👨‍💻 Author
 
-- JWT authentication  
-- Cloud deployment  
-- Notification system  
+- GitHub: [KArtickCode](https://github.com/KArtickCode)
+
+---
+
+## ⭐ Support
+
+If you like this project, don’t forget to give it a ⭐ on GitHub!
