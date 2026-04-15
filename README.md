@@ -1,5 +1,18 @@
 # 📚 Digital Library Management System
 
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Backend-green?style=for-the-badge&logo=springboot)
+![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=java)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql)
+![Hibernate](https://img.shields.io/badge/Hibernate-ORM-brown?style=for-the-badge)
+![JDBC](https://img.shields.io/badge/JDBC-Database%20Connectivity-darkblue?style=for-the-badge)
+![Spring Security](https://img.shields.io/badge/Spring%20Security-Auth-green?style=for-the-badge&logo=springsecurity)
+![Redis](https://img.shields.io/badge/Redis-Caching-red?style=for-the-badge&logo=redis)
+![Maven](https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven)
+![REST API](https://img.shields.io/badge/REST-API-lightgrey?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+
+## 🚀 Overview
+
 A full-stack **Digital Library System** built using Spring Boot that enables secure user management, book handling, and transaction processing with role-based access control.
 
 ---
