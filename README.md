@@ -29,7 +29,10 @@ A full-stack **Digital Library System** built using Spring Boot that enables sec
 ### 🔄 Transaction Management
 - Issue and return books  
 - Maintain transaction records  
-- View transaction history with filters  
+- View transaction history with filters
+
+### ⚡ Performance Optimization
+- Integrated **Redis caching** to improve response time and reduce database load  
 
 ---
 
@@ -60,19 +63,20 @@ git clone https://github.com/KArtickCode/digial-library.git
 cd digial-library
 ```
 
-🗄️ Configure Database
-
+###🗄️ Configure Database
+```bash
 Update application.properties:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/library_db
 spring.datasource.username=your_username
 spring.datasource.password=your_password
+```
 
-
-▶️ Run Application
-
+### ▶️ Run Application
+```bash
 mvn clean install
 mvn spring-boot:run
+```
 ---
 
 ## 🔗 API Endpoints
