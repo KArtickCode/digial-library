@@ -45,6 +45,8 @@ A full-stack **Digital Library System** built using Spring Boot that enables sec
 ---
 
 ## 🧩 Architecture
+
+
 Controller → Service → Repository → Database
 
 
@@ -56,7 +58,6 @@ Controller → Service → Repository → Database
 ```bash
 git clone https://github.com/KArtickCode/digial-library.git
 cd digial-library
-
 Configure Database
 
 Update application.properties:
@@ -98,3 +99,6 @@ GitHub: https://github.com/KArtickCode
 ⭐ Support
 
 Give this project a ⭐ if you like it!
+
+
+---
