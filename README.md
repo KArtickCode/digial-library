@@ -63,7 +63,7 @@ git clone https://github.com/KArtickCode/digial-library.git
 cd digial-library
 ```
 
-###🗄️ Configure Database
+### 🗄️ Configure Database
 ```bash
 Update application.properties:
 
