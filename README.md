@@ -58,7 +58,6 @@ Controller → Service → Repository → Database
 ```bash
 git clone https://github.com/KArtickCode/digial-library.git
 cd digial-library
-```
 
 🗄️ Configure Database
 
@@ -67,7 +66,10 @@ Update application.properties:
 spring.datasource.url=jdbc:mysql://localhost:3306/library_db
 spring.datasource.username=your_username
 spring.datasource.password=your_password
+
+
 ▶️ Run Application
+
 mvn clean install
 mvn spring-boot:run
 ---
