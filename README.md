@@ -68,37 +68,43 @@ spring.datasource.password=your_password
 Run Application
 mvn clean install
 mvn spring-boot:run
-🔗 API Endpoints
-Student
-POST /students
-GET /students/{id}
-GET /students/details
-Admin
-POST /admin
-Books
-POST /books
-GET /books/all
-GET /books/find-by-name?name=
-GET /books/find-by-genre?genre=
-Transactions
-POST /transactions/issue
-POST /transactions/return
-GET /transactions/all
-GET /transactions
-🔐 Security
-Spring Security with UserDetailsService
-BCrypt password encryption
-Role-based access (ADMIN / STUDENT)
-SecurityContext for logged-in user
-🚀 Future Enhancements
-JWT authentication
-Cloud deployment
-Notification system
-👨‍💻 Author
-GitHub: https://github.com/KArtickCode
-⭐ Support
+---
 
-Give this project a ⭐ if you like it!
+## 🔗 API Endpoints
 
+### 👨‍🎓 Student
+- `POST /students`  
+- `GET /students/{id}`  
+- `GET /students/details`  
+
+### 👨‍💼 Admin
+- `POST /admin`  
+
+### 📚 Books
+- `POST /books`  
+- `GET /books/all`  
+- `GET /books/find-by-name?name=`  
+- `GET /books/find-by-genre?genre=`  
+
+### 🔄 Transactions
+- `POST /transactions/issue`  
+- `POST /transactions/return`  
+- `GET /transactions/all`  
+- `GET /transactions`  
 
 ---
+
+## 🔐 Security
+
+- Spring Security with UserDetailsService  
+- BCrypt password encryption  
+- Role-based access (ADMIN / STUDENT)  
+- SecurityContext for logged-in user  
+
+---
+
+## 🚀 Future Enhancements
+
+- JWT authentication  
+- Cloud deployment  
+- Notification system  
